@@ -6,9 +6,6 @@
     <div class="view-container">
       <component :is="currentView" />
     </div>
-    <div class="output-section">
-      <textarea readonly v-model="serverOutput" class="output-box"></textarea>
-    </div>
   </div>
 </template>
 
@@ -30,7 +27,7 @@ export default {
 </script>
 
 <style>
-/* Contenedor principal */
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -39,7 +36,7 @@ export default {
   font-family: Arial, sans-serif;
 }
 
-/* Menú lateral */
+
 .sidebar {
   width: 20%;
   background-color: #f1f1f1;
@@ -50,7 +47,7 @@ export default {
   position: fixed;
 }
 
-/* Contenedor de la vista */
+
 .view-container {
   margin-left: 20%;
   width: 75%;
@@ -60,26 +57,5 @@ export default {
   border-radius: 10px;
 }
 
-/* Sección de salida */
-.output-section {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #e9ecef;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
 
-/* Cuadro de salida del servidor */
-.output-box {
-  width: 100%;
-  height: 120px;
-  padding: 10px;
-  font-size: 14px;
-  font-family: "Courier New", Courier, monospace;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  resize: none;
-  background-color: #fdfdfd;
-  color: #333;
-}
 </style>
