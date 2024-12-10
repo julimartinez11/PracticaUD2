@@ -1,17 +1,17 @@
 # Practica UD2
 
-Este proyecto está diseñado para demostrar una implementación completa de un cliente y servidor utilizando una API REST. El servidor está construido con Spring Boot, aprovechando su capacidad para desarrollar aplicaciones robustas y fácilmente escalables en Java. El cliente está construido con React, lo que permite una experiencia de usuario interactiva y dinámica.
+Este proyecto está diseñado para demostrar una implementación completa de un cliente y servidor utilizando una API REST. El servidor está construido con Laravel. El cliente está construido con Vue, lo que permite una experiencia de usuario interactiva y dinámica.
 
 ## 🚀
 
-Para realizar esta práctica las tecnologías empleadas han sido springboot para el backend, react para el frontend y también se ha usado docker.
+Para realizar esta práctica las tecnologías empleadas han sido Laravel para el backend, Vue para el frontend y también se ha usado docker.
 
 ### Requisitos 📋
 
 ##### Docker (para crear contenedores)
 ##### Docker Compose (para gestionar múltiples contenedores)
 ##### PHP (Yo he tenido que instalar la version 8.2 porque las otras me fallaban)
-##### Node.js 18+ (para ejecutar la aplicación React)
+##### Node.js 18+ (para ejecutar la aplicación Vue)
 
 
 ### Instalación 🔧
