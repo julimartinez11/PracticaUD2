@@ -1,20 +1,20 @@
-# Usa la imagen oficial de Node.js como base
-FROM node:18-alpine
+# Utiliza una imagen oficial de Node.js para construir el proyecto
+FROM node:18 as build
 
-# Establece el directorio de trabajo en el contenedor
+# Directorio de trabajo
 WORKDIR /app
 
-# Copia los archivos de package.json y package-lock.json
-COPY package.json package-lock.json ./
-
-# Instala las dependencias de Node.js
-RUN npm install
-
-# Copia el resto de los archivos del proyecto
+# Copiar archivos del proyecto
 COPY . .
 
-# Exponer el puerto 3000
-EXPOSE 3000
+# Instalar dependencias y construir el proyecto
+RUN npm install && npm run build
 
-# Comando para iniciar la aplicación React
-CMD ["npm", "start"]
+# Servidor para servir archivos estáticos
+FROM nginx:alpine
+
+# Copiar la compilación del proyecto al directorio predeterminado de NGINX
+COPY --from=build /app/dist /usr/share/nginx/html
+
+# Exponer el puerto
+EXPOSE 80
