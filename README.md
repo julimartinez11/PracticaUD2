@@ -10,7 +10,7 @@ Para realizar esta práctica las tecnologías empleadas han sido springboot para
 
 ##### Docker (para crear contenedores)
 ##### Docker Compose (para gestionar múltiples contenedores)
-##### Java 23+ (para ejecutar Spring Boot)
+##### PHP (Yo he tenido que instalar la version 8.2 porque las otras me fallaban)
 ##### Node.js 18+ (para ejecutar la aplicación React)
 
 
@@ -24,8 +24,9 @@ Lo primero clonar el proyecto y entrar a la carpeta
 git clone https://github.com/julimartinez11/practicaUD2.git
 cd practicaUD2
 ```
-
-Despues tendras que realizar el docker compose para levantarlo
+Una vez has realizado el clone puedes entrar al backend y hacer composer install , una vez realizado esto tendras que hacer una copia del .env.example a .env luego php artisan key:generate , despues migrar la bbdd php artisan migrate y por ultimo php artisan serve. Esto seria para la carpeta backend.
+Para la carpeta frontend tendras que hacer un npm install y un npm run serve.
+La otra opción es con Docker. Docker compose para levantarlo
 
 ```
 docker-compose up --build
@@ -35,7 +36,7 @@ Este comando construye las imagenes del backend y el frontend y levanta el conte
 
 ##  ⚙️
 
-Para probarlo solo tendras que entrar en tu navegador a http://localhost:3000
+Para probarlo solo tendras que entrar en tu navegador a http://localhost:8080
 
 ## Para resaltar
 
